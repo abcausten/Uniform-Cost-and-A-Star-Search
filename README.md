@@ -141,10 +141,3 @@ With V vertices and E edges:
 - The "size" columns count nodes **reached**, not nodes expanded.
 - The adjacency matrix in the assignment lists rounded distances, but the code recomputes exact distances from the coordinates, so small rounding differences are expected.
 
-## Project Structure
-
-```
-├── [your_file].cpp
-├── P2x2m.txt ... P15x10.txt   # test graphs
-└── README.md
-```
