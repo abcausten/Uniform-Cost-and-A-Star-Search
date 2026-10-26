@@ -84,22 +84,13 @@ This is an example of the output for the File P2x2m.txt.
 
 ## Build and Run
 
-Put the graph files (`P2x2m.txt`, `P2x4s.txt`, ..., `P15x10.txt`) in the same folder, then:
-
-```bash
-g++ -std=c++17 -o nav_search [your_file].cpp
-./nav_search
+```
+g++ -std=c++17 -o nav_search your_file.cpp
+./nav_search (for mac)
+.\nav_search.exe (for windows)
 ```
 
 `main` runs both algorithms on each of 10 graph files and prints one row per file:
-
-| Column | Meaning |
-|--------|---------|
-| Filename | the graph file |
-| Cost | cost of the optimal path |
-| UC cost size | number of nodes reached by UCS |
-| A\* cost size | number of nodes reached by A\* |
-| Solution Path | the UCS path on the first line, the A\* path on the second |
 
 ## Complexity
 
