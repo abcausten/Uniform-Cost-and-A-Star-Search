@@ -51,19 +51,20 @@ vector<nodeType> astar_search_Nav(navigationGraph g1, int start, int goal);     
 //////////////////////////////////////////////////////////////
 int main()
 {
-    string files[10] = {
-        "P2x2m.txt",
-        "P2x4s.txt",
-        "P3x3.txt",
-        "P3x4s.txt",
-        "P3x8s.txt",
-        "P4x6.txt",
-        "P3x10.txt",
-        "P5x10.txt",
-        "P10x10.txt",
-        "P15x10.txt",
-    };
     string filename;
+
+    string files[10] = {
+    "data/P2x2m.txt",
+    "data/P2x4s.txt",
+    "data/P3x3.txt",
+    "data/P3x4s.txt",
+    "data/P3x8s.txt",
+    "data/P4x6.txt",
+    "data/P3x10.txt",
+    "data/P5x10.txt",
+    "data/P10x10.txt",
+    "data/P15x10.txt",
+};
     cout << setw(10) << "Filename" << setw(10) << "Cost" << setw(20) << "UC cost size" << setw(20) << "A* cost size" << "\tSolution Path (UC/A*)" << endl;
     for (int i = 0; i < 10; i++)
     {
@@ -71,8 +72,8 @@ int main()
         int su, sa;
         vector<int> pu, pa;
         filename = files[i];
-        cout << setw(10) << filename;
-        if (!readGraphFromFile(filename, g1))
+        cout << setw(15) << filename.substr(filename.find('/') + 1);   // prints P2x2m.txt
+        if (!readGraphFromFile(filename, g1))                          // still opens data/P2x2m.txt
             exit(1);
         int start = 0, goal = g1.size - 1;
         su = 0;
@@ -92,7 +93,7 @@ int main()
         for (auto x : pu)
             cout << setw(4) << x;
         cout << endl;
-        cout << setw(25) << " ";
+        cout << setw(30) << " ";
         for (auto x : pa)
             cout << setw(4) << x;
         cout << endl;
