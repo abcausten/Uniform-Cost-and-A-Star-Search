@@ -93,7 +93,7 @@ int main()
         for (auto x : pu)
             cout << setw(4) << x;
         cout << endl;
-        cout << setw(30) << " ";
+        cout << setw(70) << " ";
         for (auto x : pa)
             cout << setw(4) << x;
         cout << endl;

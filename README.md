@@ -85,7 +85,7 @@ This is an example of the output for the File P2x2m.txt.
 ## Build and Run
 
 ```
-g++ -std=c++17 -o UCS_and_A* Search.cpp
+g++ -std=c++17 -o nav_search UCS_and_AStarSearch.cpp
 ./nav_search (for mac)
 .\nav_search.exe (for windows)
 ```
